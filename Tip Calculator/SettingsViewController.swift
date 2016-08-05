@@ -15,17 +15,13 @@ class SettingsViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let tipIndex = defaults.integerForKey("tipIndex")
-        tipControl.selectedSegmentIndex = tipIndex
+        tipControl.selectedSegmentIndex = UserPreferences.getDefaultRateIndex()
     }
     
     @IBAction func onTipChanged(sender: AnyObject) {
         let tipIndex = tipControl.selectedSegmentIndex
         
         // Store the tipIndex
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(tipIndex, forKey: "tipIndex")
-        defaults.synchronize()
+        UserPreferences.setDefaultRateIndex(tipIndex)
     }
 }
