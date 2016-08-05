@@ -1,5 +1,8 @@
 ### Tip Calculator iOS App
 
+#### Latest Demo of the app
+![demo](http://i.imgur.com/nfUTazq.gif)
+
 #### Project Specifications
 
 #### Design & Prototyping
