@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var billField: UITextField!
+    @IBOutlet weak var billField: CurrencyField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        billField.becomeFirstResponder()
         
         // Fetch the default tip rate
         let tipIndex = UserPreferences.getDefaultRateIndex()
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
     
     func calculateTip() {
         let tipPercentages = [0.15, 0.2, 0.25]
-        let bill = Double(billField.text!) ?? 0
+        let bill = billField.doubleValue
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         tipLabel.text = Utils.numToCurrency(tip)

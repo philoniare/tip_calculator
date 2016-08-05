@@ -12,7 +12,7 @@ class Utils {
     static func numToCurrency(amount: Double) -> String {
         let _currencyFormatter : NSNumberFormatter = NSNumberFormatter()
         _currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        _currencyFormatter.currencyCode = "USD"
+        _currencyFormatter.currencyCode = NSLocale.currentLocale().displayNameForKey(NSLocaleCurrencySymbol, value: NSLocaleCurrencyCode)
         return _currencyFormatter.stringFromNumber(amount)!;
     }
 }

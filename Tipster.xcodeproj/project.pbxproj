@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		233CE9B71D54DC87002E4FC3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */; };
 		233CE9B91D54DF1B002E4FC3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9B81D54DF1B002E4FC3 /* Utils.swift */; };
+		233CE9BB1D551A5E002E4FC3 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */; };
 		234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BB46F1D5416F60034CB0F /* SettingsViewController.swift */; };
 		2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E4991D52798300791EB9 /* AppDelegate.swift */; };
 		2384E49C1D52798300791EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E49B1D52798300791EB9 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		233CE9B81D54DF1B002E4FC3 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
 		234BB46F1D5416F60034CB0F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2384E4961D52798300791EB9 /* Tipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384E4991D52798300791EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				2384E4A51D52798300791EB9 /* Info.plist */,
 				233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */,
 				233CE9B81D54DF1B002E4FC3 /* Utils.swift */,
+				233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */,
 			);
 			path = "Tip Calculator";
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				233CE9B91D54DF1B002E4FC3 /* Utils.swift in Sources */,
 				2384E49C1D52798300791EB9 /* ViewController.swift in Sources */,
 				233CE9B71D54DC87002E4FC3 /* UserPreferences.swift in Sources */,
+				233CE9BB1D551A5E002E4FC3 /* CurrencyField.swift in Sources */,
 				2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */,
 				234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */,
 			);
