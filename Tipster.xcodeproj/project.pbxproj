@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BB46F1D5416F60034CB0F /* SettingsViewController.swift */; };
 		2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E4991D52798300791EB9 /* AppDelegate.swift */; };
 		2384E49C1D52798300791EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E49B1D52798300791EB9 /* ViewController.swift */; };
 		2384E49F1D52798300791EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2384E49D1D52798300791EB9 /* Main.storyboard */; };
@@ -15,7 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2384E4961D52798300791EB9 /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		234BB46F1D5416F60034CB0F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2384E4961D52798300791EB9 /* Tipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384E4991D52798300791EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2384E49B1D52798300791EB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2384E49E1D52798300791EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 		2384E4971D52798300791EB9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2384E4961D52798300791EB9 /* Tip Calculator.app */,
+				2384E4961D52798300791EB9 /* Tipster.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,6 +59,7 @@
 				2384E4991D52798300791EB9 /* AppDelegate.swift */,
 				2384E49B1D52798300791EB9 /* ViewController.swift */,
 				2384E49D1D52798300791EB9 /* Main.storyboard */,
+				234BB46F1D5416F60034CB0F /* SettingsViewController.swift */,
 				2384E4A01D52798300791EB9 /* Assets.xcassets */,
 				2384E4A21D52798300791EB9 /* LaunchScreen.storyboard */,
 				2384E4A51D52798300791EB9 /* Info.plist */,
@@ -67,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2384E4951D52798300791EB9 /* Tip Calculator */ = {
+		2384E4951D52798300791EB9 /* Tipster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2384E4A81D52798300791EB9 /* Build configuration list for PBXNativeTarget "Tip Calculator" */;
+			buildConfigurationList = 2384E4A81D52798300791EB9 /* Build configuration list for PBXNativeTarget "Tipster" */;
 			buildPhases = (
 				2384E4921D52798300791EB9 /* Sources */,
 				2384E4931D52798300791EB9 /* Frameworks */,
@@ -79,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "Tip Calculator";
+			name = Tipster;
 			productName = "Tip Calculator";
-			productReference = 2384E4961D52798300791EB9 /* Tip Calculator.app */;
+			productReference = 2384E4961D52798300791EB9 /* Tipster.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -100,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2384E4911D52798300791EB9 /* Build configuration list for PBXProject "Tip Calculator" */;
+			buildConfigurationList = 2384E4911D52798300791EB9 /* Build configuration list for PBXProject "Tipster" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -113,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2384E4951D52798300791EB9 /* Tip Calculator */,
+				2384E4951D52798300791EB9 /* Tipster */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +141,7 @@
 			files = (
 				2384E49C1D52798300791EB9 /* ViewController.swift in Sources */,
 				2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */,
+				234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +257,7 @@
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.philoniare.Tip-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tipster;
 			};
 			name = Debug;
 		};
@@ -264,14 +268,14 @@
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.philoniare.Tip-Calculator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Tipster;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2384E4911D52798300791EB9 /* Build configuration list for PBXProject "Tip Calculator" */ = {
+		2384E4911D52798300791EB9 /* Build configuration list for PBXProject "Tipster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2384E4A61D52798300791EB9 /* Debug */,
@@ -280,13 +284,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2384E4A81D52798300791EB9 /* Build configuration list for PBXNativeTarget "Tip Calculator" */ = {
+		2384E4A81D52798300791EB9 /* Build configuration list for PBXNativeTarget "Tipster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2384E4A91D52798300791EB9 /* Debug */,
 				2384E4AA1D52798300791EB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
