@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController {
 
@@ -41,6 +42,17 @@ class ViewController: UIViewController {
         let total = bill + tip
         tipLabel.text = Utils.numToCurrency(tip)
         totalLabel.text = Utils.numToCurrency(total)
+    }
+    @IBAction func onEditingEnd(sender: AnyObject) {
+        // Store the amount
+        let currentBill = BillRecord()
+        let bill = billField.doubleValue
+        
+        currentBill.billAmount = bill
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(currentBill)
+        }
     }
 }
 

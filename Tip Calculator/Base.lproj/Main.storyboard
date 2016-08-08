@@ -6,6 +6,25 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--History-->
+        <scene sceneID="J88-EZ-aLp">
+            <objects>
+                <viewController id="37h-UG-tzR" customClass="HistoryViewController" customModule="Tipster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D32-1w-njS"/>
+                        <viewControllerLayoutGuide type="bottom" id="svq-mh-nOq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P9b-y7-aVa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="l2F-wR-W0K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wgu-Aq-Bl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="1331"/>
+        </scene>
         <!--Tipster-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -35,47 +54,27 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="tFd-Ad-0wU"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
-                                <rect key="frame" x="173" y="136" width="127" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Bill Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tZS-fU-s1k">
-                                <rect key="frame" x="20" y="140" width="87" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Tip Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsj-MB-SfP">
-                                <rect key="frame" x="20" y="234" width="89" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9r-6M-oai">
-                                <rect key="frame" x="24" y="301" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-nz-T04">
                                 <rect key="frame" x="202" y="301" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
+                                <rect key="frame" x="100" y="102" width="210" height="102"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="51"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
+                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AZU-Lk-l0a"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="leadingMargin" secondItem="tZS-fU-s1k" secondAttribute="leading" id="1lc-bE-iCU"/>
-                            <constraint firstItem="y9r-6M-oai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="9oW-CJ-aA4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CKM-Qh-NDB" secondAttribute="trailing" id="Ev4-tA-4Eb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t8L-mf-4qG" secondAttribute="trailing" id="HcS-EE-42q"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Jsj-MB-SfP" secondAttribute="leading" id="XfX-Bh-UBu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t8L-mf-4qG" secondAttribute="trailing" constant="-10" id="FdU-Db-5GT"/>
                             <constraint firstItem="mPS-mF-Ugd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jO3-TB-YVr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ud3-nz-T04" secondAttribute="trailing" id="qSo-FR-cMe"/>
                         </constraints>
@@ -84,7 +83,11 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Tipster" id="lcT-Bs-Qfi">
-                        <barButtonItem key="leftBarButtonItem" title="History" id="tax-28-7HD"/>
+                        <barButtonItem key="leftBarButtonItem" title="History" id="tax-28-7HD">
+                            <connections>
+                                <segue destination="37h-UG-tzR" kind="push" id="g01-9d-aRC"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="saE-EA-kOZ">
                             <connections>
                                 <segue destination="dKl-vP-iFb" kind="push" id="iff-Qr-F57"/>

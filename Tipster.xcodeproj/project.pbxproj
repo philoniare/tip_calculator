@@ -10,18 +10,26 @@
 		233CE9B71D54DC87002E4FC3 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */; };
 		233CE9B91D54DF1B002E4FC3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9B81D54DF1B002E4FC3 /* Utils.swift */; };
 		233CE9BB1D551A5E002E4FC3 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */; };
+		233CE9BD1D55281B002E4FC3 /* BillRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233CE9BC1D55281B002E4FC3 /* BillRecord.swift */; };
+		233CE9C01D5528AB002E4FC3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233CE9BE1D5528AB002E4FC3 /* Realm.framework */; };
+		233CE9C11D5528AB002E4FC3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 233CE9BF1D5528AB002E4FC3 /* RealmSwift.framework */; };
 		234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234BB46F1D5416F60034CB0F /* SettingsViewController.swift */; };
 		2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E4991D52798300791EB9 /* AppDelegate.swift */; };
 		2384E49C1D52798300791EB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2384E49B1D52798300791EB9 /* ViewController.swift */; };
 		2384E49F1D52798300791EB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2384E49D1D52798300791EB9 /* Main.storyboard */; };
 		2384E4A11D52798300791EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2384E4A01D52798300791EB9 /* Assets.xcassets */; };
 		2384E4A41D52798300791EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2384E4A21D52798300791EB9 /* LaunchScreen.storyboard */; };
+		23D838361D5901FD00755D33 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D838351D5901FC00755D33 /* HistoryViewController.swift */; };
+		344D5D51D9FE45F16A8DDDF8 /* Pods_Tipster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89F3D5391AE28F63BD028E /* Pods_Tipster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		233CE9B81D54DF1B002E4FC3 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
+		233CE9BC1D55281B002E4FC3 /* BillRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillRecord.swift; sourceTree = "<group>"; };
+		233CE9BE1D5528AB002E4FC3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "Pods/../build/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		233CE9BF1D5528AB002E4FC3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "Pods/../build/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		234BB46F1D5416F60034CB0F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		2384E4961D52798300791EB9 /* Tipster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tipster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2384E4991D52798300791EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +38,10 @@
 		2384E4A01D52798300791EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2384E4A31D52798300791EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2384E4A51D52798300791EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23D838351D5901FC00755D33 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		69354C2407E45C8109861ACE /* Pods-Tipster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipster.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tipster/Pods-Tipster.release.xcconfig"; sourceTree = "<group>"; };
+		CD89F3D5391AE28F63BD028E /* Pods_Tipster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tipster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6531C99A45FCE007991BA4E /* Pods-Tipster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tipster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tipster/Pods-Tipster.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233CE9C01D5528AB002E4FC3 /* Realm.framework in Frameworks */,
+				233CE9C11D5528AB002E4FC3 /* RealmSwift.framework in Frameworks */,
+				344D5D51D9FE45F16A8DDDF8 /* Pods_Tipster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +63,8 @@
 			children = (
 				2384E4981D52798300791EB9 /* Tip Calculator */,
 				2384E4971D52798300791EB9 /* Products */,
+				3111CC1A167D47277419F129 /* Pods */,
+				A302658FD4F4E4CE192C3802 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +89,29 @@
 				233CE9B61D54DC87002E4FC3 /* UserPreferences.swift */,
 				233CE9B81D54DF1B002E4FC3 /* Utils.swift */,
 				233CE9BA1D551A5D002E4FC3 /* CurrencyField.swift */,
+				233CE9BC1D55281B002E4FC3 /* BillRecord.swift */,
+				23D838351D5901FC00755D33 /* HistoryViewController.swift */,
 			);
 			path = "Tip Calculator";
+			sourceTree = "<group>";
+		};
+		3111CC1A167D47277419F129 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6531C99A45FCE007991BA4E /* Pods-Tipster.debug.xcconfig */,
+				69354C2407E45C8109861ACE /* Pods-Tipster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A302658FD4F4E4CE192C3802 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				233CE9BE1D5528AB002E4FC3 /* Realm.framework */,
+				233CE9BF1D5528AB002E4FC3 /* RealmSwift.framework */,
+				CD89F3D5391AE28F63BD028E /* Pods_Tipster.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2384E4A81D52798300791EB9 /* Build configuration list for PBXNativeTarget "Tipster" */;
 			buildPhases = (
+				F76BBB093C401D8BC8D68486 /* [CP] Check Pods Manifest.lock */,
 				2384E4921D52798300791EB9 /* Sources */,
 				2384E4931D52798300791EB9 /* Frameworks */,
 				2384E4941D52798300791EB9 /* Resources */,
+				3828B4951CBC0CE021E03C2A /* [CP] Embed Pods Frameworks */,
+				C3BD8C5DD8A23D6337BF008C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +184,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3828B4951CBC0CE021E03C2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tipster/Pods-Tipster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3BD8C5DD8A23D6337BF008C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tipster/Pods-Tipster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76BBB093C401D8BC8D68486 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2384E4921D52798300791EB9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -153,7 +242,9 @@
 				233CE9B71D54DC87002E4FC3 /* UserPreferences.swift in Sources */,
 				233CE9BB1D551A5E002E4FC3 /* CurrencyField.swift in Sources */,
 				2384E49A1D52798300791EB9 /* AppDelegate.swift in Sources */,
+				233CE9BD1D55281B002E4FC3 /* BillRecord.swift in Sources */,
 				234BB4701D5416F60034CB0F /* SettingsViewController.swift in Sources */,
+				23D838361D5901FD00755D33 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,8 +355,20 @@
 		};
 		2384E4A91D52798300791EB9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6531C99A45FCE007991BA4E /* Pods-Tipster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+					"$(PROJECT_DIR)/Pods/RealmSwift/**",
+				);
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.philoniare.Tip-Calculator";
@@ -275,8 +378,15 @@
 		};
 		2384E4AA1D52798300791EB9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69354C2407E45C8109861ACE /* Pods-Tipster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Realm",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/RealmSwift",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$'inherited'";
 				INFOPLIST_FILE = "Tip Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.philoniare.Tip-Calculator";
