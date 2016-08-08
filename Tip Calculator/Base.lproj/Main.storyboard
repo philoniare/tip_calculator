@@ -17,9 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="P9b-y7-aVa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Im7-Ny-pU0">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="37h-UG-tzR" id="cyn-fd-AW3"/>
+                                    <outlet property="delegate" destination="37h-UG-tzR" id="DcN-Jx-4U5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="l2F-wR-W0K"/>
+                    <connections>
+                        <outlet property="billTableView" destination="Im7-Ny-pU0" id="cgF-o9-WII"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgu-Aq-Bl3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
