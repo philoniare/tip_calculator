@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         billField.becomeFirstResponder()
@@ -27,11 +27,11 @@ class ViewController: UIViewController {
         calculateTip()
     }
 
-    @IBAction func onTap(sender: AnyObject) {
+    @IBAction func onTap(_ sender: AnyObject) {
         view.endEditing(true)
     }
     
-    @IBAction func calculateTip(sender: AnyObject) {
+    @IBAction func calculateTip(_ sender: AnyObject) {
         calculateTip()
     }
     
@@ -40,10 +40,11 @@ class ViewController: UIViewController {
         let bill = billField.doubleValue
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
-        tipLabel.text = Utils.numToCurrency(tip)
-        totalLabel.text = Utils.numToCurrency(total)
+        tipLabel.text = Utils.numToCurrency(amount: tip)
+        totalLabel.text = Utils.numToCurrency(amount: total)
     }
-    @IBAction func onEditingEnd(sender: AnyObject) {
+    
+    @IBAction func onEditingEnd(_ sender: AnyObject) {
         // Store the amount
         let currentBill = BillRecord()
         let bill = billField.doubleValue

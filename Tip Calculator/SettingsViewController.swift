@@ -12,13 +12,13 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tipControl.selectedSegmentIndex = UserPreferences.getDefaultRateIndex()
     }
     
-    @IBAction func onTipChanged(sender: AnyObject) {
+    @IBAction func onTipChanged(_ sender: AnyObject) {
         let tipIndex = tipControl.selectedSegmentIndex
         
         // Store the tipIndex

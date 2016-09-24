@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="lD8-gW-HyH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="lD8-gW-HyH">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--History-->
@@ -15,19 +16,20 @@
                         <viewControllerLayoutGuide type="bottom" id="svq-mh-nOq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="P9b-y7-aVa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Im7-Ny-pU0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <frame key="frameInset" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="dataSource" destination="37h-UG-tzR" id="cyn-fd-AW3"/>
                                     <outlet property="delegate" destination="37h-UG-tzR" id="DcN-Jx-4U5"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="History" id="l2F-wR-W0K"/>
                     <connections>
@@ -47,17 +49,32 @@
                         <viewControllerLayoutGuide type="bottom" id="ALc-j2-IsH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-Qh-NDB">
-                                <rect key="frame" x="203" y="234" width="97" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-Qh-NDB">
+                                <frame key="frameInset" minX="203" minY="234" width="97" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPS-mF-Ugd">
-                                <rect key="frame" x="10" y="371" width="300" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-nz-T04">
+                                <frame key="frameInset" minX="202" minY="301" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="59" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
+                                <frame key="frameInset" minX="100" minY="102" width="210" height="102"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="51"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
+                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AZU-Lk-l0a"/>
+                                </connections>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPS-mF-Ugd">
+                                <frame key="frameInset" minX="37" minY="375" width="300" height="29"/>
                                 <segments>
                                     <segment title="15%"/>
                                     <segment title="20%"/>
@@ -67,29 +84,19 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="tFd-Ad-0wU"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-nz-T04">
-                                <rect key="frame" x="202" y="301" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
-                                <rect key="frame" x="100" y="102" width="210" height="102"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="51"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
-                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AZU-Lk-l0a"/>
-                                </connections>
-                            </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="CKM-Qh-NDB" secondAttribute="trailing" id="Ev4-tA-4Eb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t8L-mf-4qG" secondAttribute="trailing" constant="-10" id="FdU-Db-5GT"/>
-                            <constraint firstItem="mPS-mF-Ugd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jO3-TB-YVr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ud3-nz-T04" secondAttribute="trailing" id="qSo-FR-cMe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CKM-Qh-NDB" secondAttribute="trailing" constant="59" id="3x5-9H-Wnk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t8L-mf-4qG" secondAttribute="trailing" constant="49" id="CJu-5M-Cff"/>
+                            <constraint firstItem="mPS-mF-Ugd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CMx-f5-GrM"/>
+                            <constraint firstItem="ud3-nz-T04" firstAttribute="top" secondItem="CKM-Qh-NDB" secondAttribute="bottom" constant="46" id="Ckv-89-8D4"/>
+                            <constraint firstItem="t8L-mf-4qG" firstAttribute="top" secondItem="ETz-hC-mXF" secondAttribute="bottom" constant="38" id="D2J-vG-Riw"/>
+                            <constraint firstItem="mPS-mF-Ugd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="OSe-q2-tGh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ud3-nz-T04" secondAttribute="trailing" constant="59" id="XC2-Wj-jiJ"/>
+                            <constraint firstItem="mPS-mF-Ugd" firstAttribute="top" secondItem="ud3-nz-T04" secondAttribute="bottom" constant="53" id="lx4-nb-lgg"/>
+                            <constraint firstItem="CKM-Qh-NDB" firstAttribute="top" secondItem="t8L-mf-4qG" secondAttribute="bottom" constant="30" id="rpn-lF-92q"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="TkM-as-UkU" appends="YES" id="wfY-XW-k28"/>
@@ -132,17 +139,10 @@
                         <viewControllerLayoutGuide type="bottom" id="Db6-V5-TwQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="G6D-bT-I2m">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Default Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQh-gS-7U7">
-                                <rect key="frame" x="99" y="126" width="123" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gs-TC-pgf">
-                                <rect key="frame" x="10" y="188" width="300" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1gs-TC-pgf">
                                 <segments>
                                     <segment title="15%"/>
                                     <segment title="20%"/>
@@ -152,11 +152,27 @@
                                     <action selector="onTipChanged:" destination="dKl-vP-iFb" eventType="valueChanged" id="EKN-U2-0mu"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Default Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si9-42-1va">
+                                <frame key="frameInset" minX="126" minY="132" width="123" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQh-gS-7U7">
+                                <frame key="frameInset" minX="126" minY="132" width="123" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dQh-gS-7U7" firstAttribute="centerX" secondItem="G6D-bT-I2m" secondAttribute="centerX" id="7Kr-af-Oqw"/>
-                            <constraint firstItem="1gs-TC-pgf" firstAttribute="centerX" secondItem="G6D-bT-I2m" secondAttribute="centerX" id="qyr-yS-AaU"/>
+                            <constraint firstItem="1gs-TC-pgf" firstAttribute="centerX" secondItem="G6D-bT-I2m" secondAttribute="centerX" id="az3-d6-wwI"/>
+                            <constraint firstItem="si9-42-1va" firstAttribute="centerX" secondItem="G6D-bT-I2m" secondAttribute="centerX" id="dsl-fB-mPP"/>
+                            <constraint firstItem="si9-42-1va" firstAttribute="leading" secondItem="G6D-bT-I2m" secondAttribute="leadingMargin" constant="110" id="hcF-h9-frg"/>
+                            <constraint firstItem="1gs-TC-pgf" firstAttribute="top" secondItem="48Q-bL-dsU" secondAttribute="bottom" constant="136" id="hkx-Qu-i8N"/>
+                            <constraint firstItem="1gs-TC-pgf" firstAttribute="leading" secondItem="G6D-bT-I2m" secondAttribute="leadingMargin" constant="21" id="vGh-0D-KbD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="iJB-ah-dPu"/>
@@ -187,4 +203,9 @@
             <point key="canvasLocation" x="197.86666666666667" y="-369.19999999999999"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

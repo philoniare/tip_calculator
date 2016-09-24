@@ -14,13 +14,13 @@ class UserPreferences {
     }
     
     static func getDefaultRateIndex() -> Int {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        return defaults.integerForKey(Keys.tipIndexKey)
+        let defaults = UserDefaults.standard
+        return defaults.integer(forKey: Keys.tipIndexKey)
     }
     
-    static func setDefaultRateIndex(tipIndex: Int) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(tipIndex, forKey: Keys.tipIndexKey)
+    static func setDefaultRateIndex(_ tipIndex: Int) {
+        let defaults = UserDefaults.standard
+        defaults.set(tipIndex, forKey: Keys.tipIndexKey)
         defaults.synchronize()
     }
 }

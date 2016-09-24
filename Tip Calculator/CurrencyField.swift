@@ -16,18 +16,18 @@ class CurrencyField: UITextField {
     
     // Returns the amount formatted by local currency
     var currency    : String {
-        return Utils.numToCurrency(doubleValue) ?? ""
+        return Utils.numToCurrency(amount: doubleValue)
     }
     var numbersOnly : String {
-        let numArray = stringValue.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: "0123456789").invertedSet)
-        return numArray.joinWithSeparator("")
+        let numArray = stringValue.components(separatedBy: CharacterSet(charactersIn: "0123456789").inverted)
+        return numArray.joined(separator: "")
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        addTarget(self, action: #selector(CurrencyField.editingChanged(_:)), forControlEvents: .EditingChanged)
-        keyboardType = .NumberPad
+        addTarget(self, action: #selector(CurrencyField.editingChanged(_:)), for: .editingChanged)
+        keyboardType = .numberPad
         editingChanged(self)
     }
-    func editingChanged(sender: UITextField) { sender.text = currency }
+    func editingChanged(_ sender: UITextField) { sender.text = currency }
 }

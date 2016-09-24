@@ -10,9 +10,10 @@ import Foundation
 
 class Utils {
     static func numToCurrency(amount: Double) -> String {
-        let _currencyFormatter : NSNumberFormatter = NSNumberFormatter()
-        _currencyFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        _currencyFormatter.currencyCode = NSLocale.currentLocale().displayNameForKey(NSLocaleCurrencySymbol, value: NSLocaleCurrencyCode)
-        return _currencyFormatter.stringFromNumber(amount)!;
+        let price = amount as NSNumber
+        let _formatter = NumberFormatter()
+        _formatter.numberStyle = .currency
+        _formatter.locale = Locale.current
+        return _formatter.string(from: price)!
     }
 }

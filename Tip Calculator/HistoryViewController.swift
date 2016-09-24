@@ -14,28 +14,60 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var billTableView: UITableView!
     var storedBills: Results<BillRecord>!
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        // migration to add the timestamp field
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    migration.enumerateObjects(ofType: BillRecord.className()) { oldObject, newObject in
+                        let billDate = NSDate()
+                        newObject!["billDate"] = billDate
+                    }
+                }
+        })
+        
+        Realm.Configuration.defaultConfiguration = config
+        
+        
+        // delete entries that were added more than 10 minutes ago
+        deleteOldEntries()
+        
+        
         // populate the list with bills from storage
         let realm = try! Realm()
-        storedBills = realm.objects(BillRecord)
+        storedBills = realm.objects(BillRecord.self)
+    }
+    
+    func deleteOldEntries() {
+        let realm = try! Realm()
+        storedBills = realm.objects(BillRecord.self)
+        let tenMinAgo = NSDate().addingTimeInterval(-60*10)
+        for storedBill in storedBills {
+            if(storedBill.billDate.compare(tenMinAgo as Date) == .orderedAscending) {
+                try! realm.write {
+                    realm.delete(storedBill)
+                }
+            }
+        }
     }
     
     override func viewDidLoad() {
-         billTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+         billTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.storedBills.count;
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.billTableView.dequeueReusableCellWithIdentifier("cell")! as UITableViewCell
-        cell.textLabel?.text = String(self.storedBills[indexPath.row].billAmount)
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:UITableViewCell = self.billTableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        cell.textLabel?.text = String(self.storedBills[(indexPath as NSIndexPath).row].billAmount)
+        print(self.storedBills[(indexPath as NSIndexPath).row].billDate)
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
