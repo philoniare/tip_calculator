@@ -14,21 +14,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var billTableView: UITableView!
     var storedBills: Results<BillRecord>!
     
-    override func viewWillAppear(_ animated: Bool) {
-        // migration to add the timestamp field
-        let config = Realm.Configuration(
-            schemaVersion: 1,
-            migrationBlock: { migration, oldSchemaVersion in
-                if (oldSchemaVersion < 1) {
-                    migration.enumerateObjects(ofType: BillRecord.className()) { oldObject, newObject in
-                        let billDate = NSDate()
-                        newObject!["billDate"] = billDate
-                    }
-                }
-        })
-        
-        Realm.Configuration.defaultConfiguration = config
-        
+    override func viewWillAppear(_ animated: Bool) {   
+        Realm.Configuration.defaultConfiguration = Utils.getRealmConfig()
         
         // delete entries that were added more than 10 minutes ago
         deleteOldEntries()
@@ -62,8 +49,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:UITableViewCell = self.billTableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = String(self.storedBills[(indexPath as NSIndexPath).row].billAmount)
-        print(self.storedBills[(indexPath as NSIndexPath).row].billDate)
+        
+        cell.textLabel?.text = String(Utils.numToCurrency(amount:
+            self.storedBills[(indexPath as NSIndexPath).row].billAmount))
         return cell
     }
     

@@ -58,23 +58,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-nz-T04">
-                                <frame key="frameInset" minX="202" minY="301" width="98" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="59" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
-                                <frame key="frameInset" minX="100" minY="102" width="210" height="102"/>
-                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="51"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
-                                <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
-                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AZU-Lk-l0a"/>
-                                </connections>
-                            </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPS-mF-Ugd">
-                                <frame key="frameInset" minX="37" minY="375" width="300" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mPS-mF-Ugd">
                                 <segments>
                                     <segment title="15%"/>
                                     <segment title="20%"/>
@@ -84,6 +68,35 @@
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="tFd-Ad-0wU"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ud3-nz-T04">
+                                <frame key="frameInset" minX="202" minY="301" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="right" minimumFontSize="59" translatesAutoresizingMaskIntoConstraints="NO" id="t8L-mf-4qG" customClass="CurrencyField" customModule="Tipster" customModuleProvider="target">
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Light" family="Kohinoor Devanagari" pointSize="51"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="UfG-RG-Teb"/>
+                                    <action selector="onEditingEnd:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="AZU-Lk-l0a"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kk3-FL-6nr">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enb-5q-x5V">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L41-TU-EzC">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -94,9 +107,19 @@
                             <constraint firstItem="ud3-nz-T04" firstAttribute="top" secondItem="CKM-Qh-NDB" secondAttribute="bottom" constant="46" id="Ckv-89-8D4"/>
                             <constraint firstItem="t8L-mf-4qG" firstAttribute="top" secondItem="ETz-hC-mXF" secondAttribute="bottom" constant="38" id="D2J-vG-Riw"/>
                             <constraint firstItem="mPS-mF-Ugd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="OSe-q2-tGh"/>
+                            <constraint firstItem="enb-5q-x5V" firstAttribute="top" secondItem="L41-TU-EzC" secondAttribute="bottom" constant="46" id="PAi-Sg-cEL"/>
+                            <constraint firstItem="t8L-mf-4qG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="PeR-TZ-4Ek"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ud3-nz-T04" secondAttribute="trailing" constant="59" id="XC2-Wj-jiJ"/>
+                            <constraint firstItem="enb-5q-x5V" firstAttribute="top" secondItem="ETz-hC-mXF" secondAttribute="bottom" constant="237" id="aCy-VW-UQA"/>
+                            <constraint firstItem="mPS-mF-Ugd" firstAttribute="top" secondItem="Kk3-FL-6nr" secondAttribute="bottom" constant="8" id="cCX-ey-7iT"/>
+                            <constraint firstItem="Kk3-FL-6nr" firstAttribute="top" secondItem="enb-5q-x5V" secondAttribute="bottom" constant="24" id="fVk-qT-LUi"/>
+                            <constraint firstItem="enb-5q-x5V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="fWi-vG-Nzo"/>
                             <constraint firstItem="mPS-mF-Ugd" firstAttribute="top" secondItem="ud3-nz-T04" secondAttribute="bottom" constant="53" id="lx4-nb-lgg"/>
+                            <constraint firstItem="Kk3-FL-6nr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="rbr-0i-xcB"/>
                             <constraint firstItem="CKM-Qh-NDB" firstAttribute="top" secondItem="t8L-mf-4qG" secondAttribute="bottom" constant="30" id="rpn-lF-92q"/>
+                            <constraint firstItem="Kk3-FL-6nr" firstAttribute="top" secondItem="ETz-hC-mXF" secondAttribute="bottom" constant="282" id="tM3-nv-eG9"/>
+                            <constraint firstItem="L41-TU-EzC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="21" id="uBX-hP-6zI"/>
+                            <constraint firstItem="L41-TU-EzC" firstAttribute="top" secondItem="ETz-hC-mXF" secondAttribute="bottom" constant="170" id="v45-lD-yRr"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="TkM-as-UkU" appends="YES" id="wfY-XW-k28"/>
@@ -128,7 +151,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="197" y="505"/>
+            <point key="canvasLocation" x="196.5" y="504.5"/>
         </scene>
         <!--Settings-->
         <scene sceneID="DgD-Tm-Wtd">

@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         let bill = billField.doubleValue
         
         currentBill.billAmount = bill
+        currentBill.billDate = NSDate()
+        
+        Realm.Configuration.defaultConfiguration = Utils.getRealmConfig()
         let realm = try! Realm()
         try! realm.write {
             realm.add(currentBill)

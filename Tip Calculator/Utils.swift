@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class Utils {
     static func numToCurrency(amount: Double) -> String {
@@ -15,5 +16,20 @@ class Utils {
         _formatter.numberStyle = .currency
         _formatter.locale = Locale.current
         return _formatter.string(from: price)!
+    }
+    
+    static func getRealmConfig() -> Realm.Configuration {
+        return Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { migration, oldSchemaVersion in
+                if (oldSchemaVersion < 1) {
+                    // migration to add the timestamp field   
+                    migration.enumerateObjects(ofType: BillRecord.className()) { oldObject, newObject in
+                        let billDate = NSDate()
+                        newObject!["billDate"] = billDate
+                    }
+                }
+            }
+        )
     }
 }
